@@ -1,0 +1,43 @@
+
+<h1>Signup</h1>
+
+<form action="/signup" method="post">
+
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username">
+
+    <label for="password">password</label>
+    <input id="password" name="password" type="password">
+
+    <label for="email">email</label>
+    <input id="email" name="email" type="email">
+
+   <label for="firstName">First Name</label>
+    <input id="firstName" name="firstName" type="text">
+
+   <label for="lastName">Last Name</label>
+    <input id="lastName" name="lastName" type="text">
+
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone"
+           placeholder="123-456-7890"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+           required />
+    <span class="validity"></span>
+    
+<label>Are you using this account as a client or as a business?</label>
+<select name="userType" required="true">
+    <option value="client">Client</option>
+    <option value="business">Business</option>
+</select>
+
+    <button>Submit</button>
+
+
+
+</form>
+
+{{#if errorMessage}}
+<div>{{errorMessage}}</div>
+{{/if}}

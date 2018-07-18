@@ -1,0 +1,31 @@
+
+<h2></h2>
+
+
+<form action="/meets/create" method="post">
+{{!-- may want to add a start and end date but then
+would need multiple times for each created date and
+that would be more complicated right now, probably
+would need a button to generate dates and then a foreach
+loop in the page to generate buttons to fill in each time --}}
+<label>Date</label>
+<input type="date" name="date">
+<br>
+<label>Start Time</label>
+<input type="time" name="time">
+<br>
+<label>Duration in minutes</label>
+<input type="number" name="duration">minutes
+<br>
+<button>Submit</button>
+<label>Business</label>
+<select name="business" required="true">
+    <option value="null"></option>
+    {{#each user}}
+    {{!-- {{#if user.type.equals.business}} --}}
+    <option value="{{this._id}}">{{this.firstName}} {{this.lastName}}</option>
+    {{/each}}  
+</select>
+<br>
+
+</form>
