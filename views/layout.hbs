@@ -3,14 +3,47 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+{{!-- this script is an experiment to see how time works in browser in js 
+results: each time the page is refreshed it reruns the script and gets the time/date from
+the user's computer settings including time zone. note that script written here in the layout
+will show from layout on the index page but cant be referred to in index.hbs?--}}
+      {{!-- <script type="text/javascript">
+    var currentTime = new Date();
+  </script> --}}
+    </head>
   <body>
-    <nav>
+  <nav>
+{{#if theUser.username}}
+<h1>Welcome {{theUser.username}}</h1>
+<a href="/businesslist">Find a Business</a>
+<a href="/account">My Account</a>
+<a href="/logout">Logout</a>
+{{/if}}
+{{#unless theUser.username}}
 <a href="/login">login</a>
 <a href="/signup">sign up</a>
+{{/unless}}
     </nav>
+        {{!-- <h1>
+      The current time and Date is:
+      <script type="text/javascript">
+        document.write(currentTime)
+      </script>
+    </h1> --}}
     {{{body}}}
 
     <script src='/javascripts/script.js'></script>
   </body>
 </html>
+
+{{!-- <html>
+<head>
+  <script type="text/javascript">
+    var number = 123;
+  </script>
+</head>
+
+<body>
+
+</body>
+</html> --}}

@@ -1,0 +1,10 @@
+{{#each listOfBusinesses}}
+    {{#if this.isBusiness}}
+    <h2>{{this.businessName}}</h2>
+    <h2> {{this.username}}</h2>
+    <h3>{{this.firstName}} {{this.lastName}}</h3>
+    <h4><a href="http://{{this.websiteURL}}">{{this.websiteURL}}</a></h4>
+    <p>{{this.businessDescription}}</p>
+    <hr>
+    {{/if}}
+{{/each}}

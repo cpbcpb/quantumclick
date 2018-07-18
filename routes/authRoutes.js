@@ -3,7 +3,7 @@ const userRouter   = express.Router();
 const User         = require('../models/user');
 const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
-
+//account edit and delete routes are in account routes
 
 
 userRouter.get('/signup', (req, res, next)=>{
@@ -33,7 +33,8 @@ userRouter.post('/signup', (req, res, next)=>{
                 phone: req.body.phone,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                userType: req.body.userType, 
+                isBusiness: req.body.isBusiness, 
+
             })
             .then((response)=>{
                 res.redirect('/');

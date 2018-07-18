@@ -8,7 +8,7 @@ const userSchema = new Schema({
     password: String,
    email: String,
    phone: String,
-   userType: {type: String, enum: ['business', 'client']},
+   isBusiness: {type: Boolean, default: false},
    firstName: String,
    lastName: String,
    //things to be added after signup

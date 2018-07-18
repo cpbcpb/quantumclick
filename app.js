@@ -79,6 +79,12 @@ app.use(flash());
 // default value for title local
 app.locals.title = 'Reserve Your Session';
 
+// //trying to figure out how time works in js in browser seems like t
+//this script would create a date that starts when server starts and doesn't change (in layout
+//from just clicking around the site....)
+// app.locals.time = new Date();
+
+
 //passport stuff
 
 passport.use(new LocalStrategy((username, password, next) => {
@@ -110,5 +116,10 @@ app.use('', authRoutes);
 
 const meetRoutes = require('./routes/meetRoutes');
 app.use('/', meetRoutes);
+
+const accountRoutes = require('./routes/accountRoutes');
+app.use('/', accountRoutes);
+
+
 
 module.exports = app;

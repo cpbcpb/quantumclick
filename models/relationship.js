@@ -9,10 +9,11 @@ const relationshipSchema = new Schema({
 business: Schema.Types.ObjectId,
 customer: Schema.Types.ObjectId,
 approvedByBusiness: Boolean,
+approvedByCustomer: Boolean,
 Meets:[{Type:Schema.Types.ObjectId}],
-   
+
   });
   const Relationship = mongoose.model("Relationship", relationshipSchema);
 
 
-  module.exports = Relationship;
+  module.exports = Relationship; 

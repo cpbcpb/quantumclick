@@ -1,3 +1,6 @@
+//right now this file is garbage
+
+
 const express     = require('express');
 const router      = express.Router();
 const Meet        = require('../models/meet');
