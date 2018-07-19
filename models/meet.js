@@ -4,9 +4,9 @@ const Schema   = mongoose.Schema;
 
 const meetSchema = new Schema({
 //the user who created the appointment
-    business: {type: Schema.Types.ObjectId, required: true},
+    business: {type: Schema.Types.ObjectId, ref: 'User', required: true},
 //the user who reserved the appointment
-    client: {type: Schema.Types.ObjectId, required: true},
+    client: {type: Schema.Types.ObjectId, ref: 'User', required: true},
 //start date and time of upcoming meeting
     datetime: {type: Date, required: true},
 //duration of upcoming meeting

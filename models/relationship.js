@@ -4,16 +4,18 @@
 
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
-
+//if doesn't work try just ObjectId
 const relationshipSchema = new Schema({
-business: Schema.Types.ObjectId,
-customer: Schema.Types.ObjectId,
-approvedByBusiness: Boolean,
-approvedByCustomer: Boolean,
-Meets:[{Type:Schema.Types.ObjectId}],
+business: {type: Schema.Types.ObjectId, ref: 'User',},
+customer: {type: Schema.Types.ObjectId, ref: 'User',},
+approvedByBusiness: {type: Boolean, default: false},
+approvedByCustomer: {type: Boolean, default: false},
+sharedMeets:[{Type:Schema.Types.ObjectId}],
 
   });
   const Relationship = mongoose.model("Relationship", relationshipSchema);
 
 
   module.exports = Relationship; 
+
+  // theUser.username

@@ -120,6 +120,8 @@ app.use('/', meetRoutes);
 const accountRoutes = require('./routes/accountRoutes');
 app.use('/', accountRoutes);
 
+const connectionRoutes = require('./routes/connectionRoutes');
+app.use('/', connectionRoutes);
 
 
 module.exports = app;

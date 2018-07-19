@@ -1,0 +1,28 @@
+
+<h2>Connect to a Business to start reserving sessions</h2>
+
+
+<form action="/business/:id/createconnect" method="post">
+
+<label>{{theUser.username}}</label>
+<input type="text" name="title">
+<br>
+<label>Your Name</label>
+<select name="customerName" required="true">
+    <option value="null"></option>
+    <option value="{{theUser._id}}">{{theUser.firstName}} {{theUser.lastName}}</option>
+</select>
+<br>
+
+<label>Business</label>
+<select name="business" required="true">
+    <option value="null"></option>
+    {{#each listOfBusinesses}}
+    <option value="{{this._id}}">{{this.businessName}}{{this.firstName}}{{this.lastName}}</option>
+    {{/each}}  
+</select>
+<br>
+<button type="submit">Connect</button>
+
+
+</form>
