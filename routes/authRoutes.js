@@ -1,14 +1,15 @@
 const express      = require('express');
 const userRouter   = express.Router();
-const User         = require('../models/user');
+const User  =require('../models/user')
 const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
+const ensureLogin = require('connect-ensure-login');
 //account edit and delete routes are in account routes
 
 
 userRouter.get('/signup', (req, res, next)=>{
 
-    res.render('userViews/signupPage');
+    res.render('userViews/signupPage', {theUser: req.user});
 })
 
 userRouter.post('/signup', (req, res, next)=>{
@@ -16,13 +17,15 @@ userRouter.post('/signup', (req, res, next)=>{
     const theUsername = req.body.username;
     if(thePassword === "" || theUsername === ""){
         res.render('userViews/signupPage', 
-        {errorMessage: 'Please fill in both a username and password in order to create an account'})
+        {theUser:req.user, errorMessage: 'Please fill in both a username and password in order to create an account'})
         return;
     }
     User.findOne({'username': theUsername})
     .then((responseFromDB)=>{
         if (responseFromDB !== null){
-            res.render('userViews/signupPage', {errorMessage: `Sorry, the username ${theUsername} is awesome, so you cant have it. Too late! Be a beta tester next time`})
+            res.render('userViews/signupPage', {errorMessage: `Sor
+            e ${theUsername} is awesome, so you cant have it. 
+            Too late! Be a beta tester next time`})
             return;
         } // ends the if statement
             const salt     = bcrypt.genSaltSync(10);
@@ -49,7 +52,7 @@ userRouter.post('/signup', (req, res, next)=>{
 //login
 
 userRouter.get('/login', (req, res, next)=>{
-    res.render('userViews/loginPage', { message: req.flash("error") });
+    res.render('userViews/loginPage', { theUser: req.user, message: req.flash("error") });
 });
 
 userRouter.post("/login", passport.authenticate("local", {

@@ -1,3 +1,10 @@
+Here are your current connections
+{{alreadyExists}}
+{{#each alreadyExists}}
+{{this.business.username}}
+<hr>
+{{/each}}
+
 {{#each listOfBusinesses}}
     {{#if this.isBusiness}}
     <h2>{{this.businessName}}</h2>
@@ -5,7 +12,8 @@
     <h3>{{this.firstName}} {{this.lastName}}</h3>
     <h4><a href="http://{{this.websiteURL}}">{{this.websiteURL}}</a></h4>
     <p>{{this.businessDescription}}</p>
-    Connect with this business: <a href="business/{{this._id}}/connect">Connect</a>
-    <hr>
+<form action="/business/createconnect" method="post">
+<button name="business" value={{this._id}} type="submit">Connect</button>
     {{/if}}
+    <hr>
 {{/each}}

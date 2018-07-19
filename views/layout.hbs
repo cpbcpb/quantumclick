@@ -17,6 +17,7 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 <h1>Welcome {{theUser.username}}</h1>
 <a href="/businesslist">Find a Business</a>
 <a href="/account">My Account</a>
+<a href="/account/myconnections">My Connections</a>
 <a href="/logout">Logout</a>
 {{/if}}
 {{#unless theUser.username}}
@@ -24,6 +25,9 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 <a href="/signup">sign up</a>
 {{/unless}}
     </nav>
+    {{#if Message}}
+    <h1>Site Message:{{Message}}</h1>
+    {{/if}}
         {{!-- <h1>
       The current time and Date is:
       <script type="text/javascript">

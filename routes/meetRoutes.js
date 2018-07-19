@@ -1,11 +1,14 @@
 //right now this file is garbage
 
-
-const express     = require('express');
-const router      = express.Router();
+const express      = require('express');
+const router   = express.Router();
+const User  =require('../models/user')
+const bcrypt       = require('bcryptjs');
+const passport     = require('passport');
+const ensureLogin = require('connect-ensure-login');
 const Meet        = require('../models/meet');
 const Relationship      = require('../models/relationship');
-const ensureLogin = require('connect-ensure-login');
+
 
 // router.use((req, res, next) => {
 //     if (req.session.currentUser) {
