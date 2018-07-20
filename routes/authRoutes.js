@@ -43,6 +43,9 @@ userRouter.post('/signup', (req, res, next)=>{
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 isBusiness: req.body.isBusiness, 
+                websiteURL: req.body.websiteURL,
+                businessName: req.body.businessName,
+                businessDescription: req.body.businessDescription,
 
             })
             .then((response)=>{
