@@ -29,10 +29,18 @@
 <select name="isBusiness" required="true">
     <option value=true>Business</option>
     <option value=false>Client</option>
-
 </select>
+Required for business only:
+<label>Business Name</label>
+<input type="text" name="businessName">
+<br>
+<label>website URL</label>
+<input type="text" name="websiteURL">
+<br>
+<label>Describe Your Business</label>
+<textarea name="businessDescription" cols="30" rows="10" ></textarea><br>
 
-    <button>Submit</button>
+    <button class="btn btn-default" >Submit</button>
 
 
 

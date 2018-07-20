@@ -1,19 +1,23 @@
-Here are your current connections
+{{#if alreadyExists}}
+Current Connections
 {{alreadyExists}}
 {{#each alreadyExists}}
 {{this.business.username}}
 <hr>
 {{/each}}
-
+{{/if}}
+Connect to Businesses
+<div class="busBoxes">
 {{#each listOfBusinesses}}
     {{#if this.isBusiness}}
-    <h2>{{this.businessName}}</h2>
-    <h2> {{this.username}}</h2>
-    <h3>{{this.firstName}} {{this.lastName}}</h3>
-    <h4><a href="http://{{this.websiteURL}}">{{this.websiteURL}}</a></h4>
+<div class="busBox">
+    {{>businessPartial}}
+<div class="busD">{{this.businessDescription}}</div>
     <p>{{this.businessDescription}}</p>
 <form action="/business/createconnect" method="post">
 <button name="business" value={{this._id}} type="submit">Connect</button>
+</div>
     {{/if}}
     <hr>
+    </div>
 {{/each}}

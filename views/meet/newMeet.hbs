@@ -1,25 +1,28 @@
-
-<h2></h2>
-
-
-<form action="/meets/create" method="post">
-{{!-- may want to add a start and end date but then
-would need multiple times for each created date and
-that would be more complicated right now, probably
-would need a button to generate dates and then a foreach
-loop in the page to generate buttons to fill in each time --}}
+<form class="form-horizontal" action="/meets/create" method="post">
+<div class="form-group">
 <label for="meetName">Name your session:</label>
+
 <input type="hidden" value={{theUser._id}} name="business">
 <input type="text" name="meetName" id="meetName">
+</div>
+<div class="form-group">
 <label>Date</label>
+
 <input type="datetime-local" name="dateTime">
-<br>
+</div>
+<div class="form-group">
 <label>Duration in minutes</label>
 <input type="number" name="durationInMinutes">minutes
-<br>
-<label>location</label>
+</div>
+  <div class="form-group">
+<label>Location</label>
 <input type="text" name="location">
+</div>
 <br>
+  <div class="form-group">
+<label for="">Put an Image URL here</label>
+<input type="text" name="imageURL">
+</div>
 {{!-- **********not working right*************
 <fieldset>
 <legend>Choose confirmed customers:</legend>
@@ -29,9 +32,6 @@ loop in the page to generate buttons to fill in each time --}}
     {{/each}}  
 </fieldset> --}}
 <br>
-<button>Submit</button>
+<button class="btn btn-default">Submit</button>
 <br>
-
 </form>
-
-{{allRelationships}}

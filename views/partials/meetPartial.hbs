@@ -1,0 +1,12 @@
+{{!-- this should be in a each pointing at a meet --}}
+<div class="card partial" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{this.meetName}}</h5>
+    <p class="card-text">{{this.dateTime}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+        <li class="list-group-item">Duration: {{this.durationInMinutes}}</li>
+    <li class="list-group-item">Location: {{this.location}}</li>
+    <li class="list-group-item">{{#if this.isConfirmed}}Confirmed: Yes{{/if}}</li>
+  </ul>
+</div>

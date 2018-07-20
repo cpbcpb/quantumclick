@@ -1,8 +1,45 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+/*# sourceMappingURL=style.css.map */
+form {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 10px; }
 
-a {
-  color: #00B7FF; }
+form label {
+  display: flex; }
+
+form input {
+  width: max-content; }
+
+.card {
+  border: .5px solid green;
+  padding: 10px;
+  width: max-content; }
+
+.busBoxes {
+  display: flex;
+  flex-direction: row; }
+
+.connectContain {
+  display: flex;
+  flex-direction: column; }
+
+.eventrow {
+  display: flex;
+  flex-direction: row; }
+
+nav {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightseagreen; }
+
+.eventrow label {
+  padding-left: 10px;
+  padding-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

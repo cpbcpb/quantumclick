@@ -41,6 +41,7 @@ router.post('/meets/create', (req, res, next)=>{
     isConfirmed: true,
     dateTime: req.body.dateTime,
     durationInMinutes: req.body.durationInMinutes,
+    imageURL: req.body.imageURL
    })
    newMeet.save()
    console.log(`newmeetid`+newMeet._id)

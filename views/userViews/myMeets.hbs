@@ -1,32 +1,20 @@
-{{#if theUser.isBusiness}}
 <h2>These are your meets:</h2>
+<div class="eventrow" >
 {{#each listOfMeets}}
 <br>
-{{this.meetName}}
-<br>
-   <h3>{{this.business.businessName}}</h3> 
-    <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
-    <br>
-    <h3>{{this.dateTime}}</h3> 
+<div>
+{{> meetPartial}}
+</div>
     <br>
 <br>
 <hr>
 
-{{/each}}
-{{/if}}
+{{/each}}</div>
+
 {{#unless theUser.isBusiness}}
-<h2>These are your meets</h2>
-<ul>
-{{#each listOfMeets}}
-   <h3>{{this.business.businessName}}</h3> 
-    <h3>{{this.meetName}}</h3> 
-    <h3>{{this.meetTime}}</h3> 
-    <h3>{{this.business.phone}}</h3>    
-    <hr>
-{{/each}}
 <a href="/businesslist">Connect to some businesses</a>
 {{/unless}}
-</ul>
+
 
 
 {{!-- list of connections{{listOfConnections}} --}}

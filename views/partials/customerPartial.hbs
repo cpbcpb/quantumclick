@@ -1,6 +1,11 @@
-<div class="card" style="width: 33.333%;">
-      <div class="card-body">
-        <h5 class="card-title">{{this.username}}</h5>
-        <p class="card-text">{{this.phone}}</p>
-      </div>
+{{!-- this should be in a each pointing at a meet --}}
+<div class="card partial" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{this.customer.username}}</h5>
+    <p class="card-text">{{this.customer.firstName}} {{this.customer.lastName}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+        <li class="list-group-item">Duration: {{this.customer.phone}}</li>
+    <li class="list-group-item">Location: {{this.customer.email}}</li>
+  </ul>
 </div>
