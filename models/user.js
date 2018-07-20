@@ -15,7 +15,8 @@ const userSchema = new Schema({
    businessDescription: {type: String},
    websiteURL: {type: String},
    //the user's connections
-   connections: [{type: Schema.Types.ObjectId, ref: 'Connection'}],
+   connections: [{type: Schema.Types.ObjectId}
+],  
    meets: [{type: Schema.Types.ObjectId, ref: 'Meet'}
         ],
 },

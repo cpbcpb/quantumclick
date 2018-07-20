@@ -73,6 +73,7 @@ router.post('/business/createconnect', (req, res, next)=>{
             approvedByCustomer: true
             })        
         newConnection.save()
+        User.update({_id: req.user._id},{$push: { connections: newConnection._id}})   
         .then((thingy)=>{
         Connection.find({$or: [{customer:req.user},{business:req.user}]})
         .populate('business')
@@ -89,9 +90,8 @@ router.post('/business/createconnect', (req, res, next)=>{
 
 
 router.post('/business/approve',(req, res, next)=>{
-    Connection.findByIdAndUpdate(req.body.connectionId, {
-    approvedByBusiness: req.body.approval
-    })
+    User.update({_id: req.user._id},{$push: { connections: req.body.connectionId}});
+    Connection.findByIdAndUpdate(req.body.connectionId,{approvedByBusiness:req.body.approval})
     .then((thingy)=>{
         Connection.find({$or: [{customer:req.user},{business:req.user}]})
         .populate('business')
