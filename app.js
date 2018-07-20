@@ -20,7 +20,7 @@ const Schema        = mongoose.Schema;
 
 
 const User        =require('./models/user');
-const Relationship        =require('./models/relationship');
+const Connection        =require('./models/connection');
 const Meet        =require('./models/meet');
 
 mongoose.Promise = Promise;
@@ -77,7 +77,7 @@ passport.deserializeUser((id, cb) => {
 app.use(flash());
 
 // default value for title local
-app.locals.title = 'Reserve Your Session';
+app.locals.title = 'OurSessions';
 
 // //trying to figure out how time works in js in browser seems like t
 //this script would create a date that starts when server starts and doesn't change (in layout

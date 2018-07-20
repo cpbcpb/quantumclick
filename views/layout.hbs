@@ -15,7 +15,14 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
   <nav>
 {{#if theUser.username}}
 <h1>Welcome {{theUser.username}}</h1>
+{{#if theUser.isBusiness}}
+<a href="/meets/new">Create a session</a>
+<a href="/account/mymeets">My sessions</a>
+{{/if}}
+{{#unless theUser.isBusiness}}
 <a href="/businesslist">Find a Business</a>
+{{/unless}}
+
 <a href="/account">My Account</a>
 <a href="/account/myconnections">My Connections</a>
 <a href="/logout">Logout</a>

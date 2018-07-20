@@ -1,17 +1,20 @@
+//create connection
+//see connection
+//business approve connection
 const express      = require('express');
 const router   = express.Router();
 const User  =require('../models/user')
 const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
 const ensureLogin = require('connect-ensure-login');
-const Relationship =require('../models/relationship');
+const Connection =require('../models/connection');
 
 router.get('/account/myconnections', ensureLogin.ensureLoggedIn(), (req, res, next)=>{
-    Relationship.find({$or: [{customer:req.user},{business:req.user}]})
+    Connection.find({$or: [{customer:req.user},{business:req.user}]})
     .populate('business')
     .populate('customer')
-    .then((listOfRelationships)=>{
-    res.render('userViews/myConnections', {theUser: req.user, listOfRelationships})
+    .then((listOfConnections)=>{
+    res.render('userViews/myConnections', {theUser: req.user, listOfConnections})
     })
     .catch((err)=>{
         next(err);
@@ -20,7 +23,7 @@ router.get('/account/myconnections', ensureLogin.ensureLoggedIn(), (req, res, ne
 router.get('/businesslist', (req, res, next) => {
     User.find()
     .then((listOfBusinesses)=>{
-        Relationship.find({$and:[{customer: req.user},{business:req.body.business}]})
+        Connection.find({$and:[{customer: req.user},{business:req.body.business}]})
         .populate('business')
         .populate('customer')
         .then((alreadyExists)=>{
@@ -47,14 +50,14 @@ router.get('/business/:id/connect', ensureLogin.ensureLoggedIn(), (req, res, nex
   });
 
 router.post('/business/createconnect', (req, res, next)=>{
-    Relationship.findOne({$and:[{'business':req.body.business},{'customer':req.user._id}]})
+    Connection.findOne({$and:[{'business':req.body.business},{'customer':req.user._id}]})
       .then((thisthing)=>{
         console.log('this thing' +thisthing)
         if(thisthing!==null){
-            Relationship.find({$or: [{customer:req.user},{business:req.user}]})
+            Connection.find({$or: [{customer:req.user},{business:req.user}]})
             .populate('business')
             .populate('customer')
-            .then((listOfRelationships)=>{
+            .then((listOfConnections)=>{
                 res.render('userViews/myConnections', {theUser:req.user, Message:'You are connected to this business'})
             })
             .catch((err)=>{
@@ -63,19 +66,19 @@ router.post('/business/createconnect', (req, res, next)=>{
         // res.render('/',{errorMessage: `You have already connected with this business.`})
             return;
           }
-            const newRelationship = new Relationship({
+            const newConnection = new Connection({
             customer: req.user._id,
             business: req.body.business,
             approvedByBusiness: 'false',
             approvedByCustomer: true
             })        
-        newRelationship.save()
+        newConnection.save()
         .then((thingy)=>{
-        Relationship.find({$or: [{customer:req.user},{business:req.user}]})
+        Connection.find({$or: [{customer:req.user},{business:req.user}]})
         .populate('business')
         .populate('customer')
-        .then((listOfRelationships)=>{
-            res.render('userViews/myConnections', {listOfRelationships, theUser:req.user, Message:'You are connected to this business'})
+        .then((listOfConnections)=>{
+            res.render('userViews/myConnections', {listOfConnections, theUser:req.user, Message:'You are connected to this business'})
         })
         .catch((err)=>{
             next(err);
@@ -84,15 +87,16 @@ router.post('/business/createconnect', (req, res, next)=>{
     })
 })
 
+
 router.post('/business/approve',(req, res, next)=>{
-    Relationship.findByIdAndUpdate(req.body.relationshipId, {
+    Connection.findByIdAndUpdate(req.body.connectionId, {
     approvedByBusiness: req.body.approval
     })
     .then((thingy)=>{
-        Relationship.find({$or: [{customer:req.user},{business:req.user}]})
+        Connection.find({$or: [{customer:req.user},{business:req.user}]})
         .populate('business')
         .populate('customer')
-        .then((listOfRelationships)=>{
+        .then((listOfConnections)=>{
         res.redirect('/account/myconnections')
         })
         .catch((err)=>{
@@ -103,5 +107,8 @@ router.post('/business/approve',(req, res, next)=>{
         next(err);
     })  
 })
+
+
+
 
  module.exports = router;

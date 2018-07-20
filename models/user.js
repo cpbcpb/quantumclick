@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-
 const userSchema = new Schema({
     //things to be given in signup
     username: String,
@@ -15,9 +14,11 @@ const userSchema = new Schema({
    businessName: {type: String},
    businessDescription: {type: String},
    websiteURL: {type: String},
-   //the user's meets
-   meets: [{Type: Schema.Types.ObjectId}],
-   },
+   //the user's connections
+   connections: [{type: Schema.Types.ObjectId, ref: 'Connection'}],
+   meets: [{type: Schema.Types.ObjectId, ref: 'Meet'}
+        ],
+},
     {timestamps: true},
     );
 

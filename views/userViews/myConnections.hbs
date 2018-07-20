@@ -1,14 +1,19 @@
 {{#if theUser.isBusiness}}
 <h2>These are your customers:</h2>
-{{#each listOfRelationships}}
+{{#each listOfConnections}}
+<br>
+{{this.customer.username}}
+<br>
    <h3>{{this.customerName}}</h3> 
     <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
+    <br>
     <h3>{{this.customer.email}}</h3> 
+    <br>
     <h3>{{this.customer.phone}}</h3> 
-    {{this}}
+<br>
     {{#unless approvedByBusiness}}
     <form action="/business/approve" method="post">
-        <input type='hidden' name='relationshipId' value={{this._id}}>
+        <input type='hidden' name='connectionId' value={{this._id}}>
         <button type="submit" name="approval" value="true">Approve connection to customer?</button>
     </form>
     {{/unless}}
@@ -19,7 +24,7 @@
 {{#unless theUser.isBusiness}}
 <h2>These are the businesses you have connected with:</h2>
 <ul>
-{{#each listOfRelationships}}
+{{#each listOfConnections}}
    <h3>{{this.business.businessName}}</h3> 
     <h3>{{this.business.firstName}} {{this.business.lastName}}</h3> 
     <h3>{{this.business.email}}</h3> 
@@ -31,4 +36,4 @@
 </ul>
 
 
-{{!-- list of connections{{listOfRelationships}} --}}
+{{!-- list of connections{{listOfConnections}} --}}

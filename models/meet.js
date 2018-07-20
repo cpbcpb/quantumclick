@@ -2,11 +2,17 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const meetSchema = new Schema({
-    business: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    client: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    datetime: {type: Date, required: true},
-    durationinMinutes: {type: Number, default: 30, enum:[30, 45, 60, 90, 120]},
-    status: {type: String, default: 'upcoming', enum:['upcoming', 'canceled', 'missed', 'completed',]},
+    meetName: {type: String,},
+    business: {type: Schema.Types.ObjectId, ref: 'User',},
+    customers: [{type: Schema.Types.ObjectId, ref: 'User'}], default:[],
+    dateTime: {type: Date,},
+    durationInMinutes: {type: Number, default: 30, enum:[30, 45, 60, 90, 120]},
+    location: String,
+    isConfirmed: Boolean,
+    isCanceled: Boolean,
+    isCompleted: Boolean,
+    isMissed: Boolean,
+
   });
 
   const Meet = mongoose.model("Meet", meetSchema);

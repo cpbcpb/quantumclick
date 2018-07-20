@@ -8,24 +8,30 @@ would need multiple times for each created date and
 that would be more complicated right now, probably
 would need a button to generate dates and then a foreach
 loop in the page to generate buttons to fill in each time --}}
+<label for="meetName">Name your session:</label>
+<input type="hidden" value={{theUser._id}} name="business">
+<input type="text" name="meetName" id="meetName">
 <label>Date</label>
-<input type="date" name="date">
-<br>
-<label>Start Time</label>
-<input type="time" name="time">
+<input type="datetime-local" name="dateTime">
 <br>
 <label>Duration in minutes</label>
-<input type="number" name="duration">minutes
+<input type="number" name="durationInMinutes">minutes
+<br>
+<label>location</label>
+<input type="text" name="location">
+<br>
+{{!-- **********not working right*************
+<fieldset>
+<legend>Choose confirmed customers:</legend>
+    {{#each allRelationships}}
+<label for={{this.customer._id}}>{{this.customer.firstName}} {{this.customer.lastName}}</label>
+<input type="checkbox" name="customer" id={{this.customer._id}} value="{{this.customer._id}}">
+    {{/each}}  
+</fieldset> --}}
 <br>
 <button>Submit</button>
-<label>Business</label>
-<select name="business" required="true">
-    <option value="null"></option>
-    {{#each user}}
-    {{!-- {{#if user.type.equals.business}} --}}
-    <option value="{{this._id}}">{{this.firstName}} {{this.lastName}}</option>
-    {{/each}}  
-</select>
 <br>
 
 </form>
+
+{{allRelationships}}
