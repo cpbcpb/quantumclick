@@ -10,15 +10,7 @@
     {{#each listOfConnections}}
      {{#unless this.approvedByBusiness}}
     <br>
-    {{this.customer.username}}
-    <br>
-    <h3>{{this.customerName}}</h3> 
-        <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
-        <br>
-        <h3>{{this.customer.email}}</h3> 
-        <br>
-        <h3>{{this.customer.phone}}</h3> 
-    <br>
+    {{>customerPartial}}
             <hr>
             <form action="/business/approve" method="post">
             <input type='hidden' name='connectionId' value={{this._id}}>
