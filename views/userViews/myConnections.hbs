@@ -1,35 +1,73 @@
 {{#if theUser.isBusiness}}
-<h2>These are your customers:</h2>
-{{#each listOfConnections}}
-<br>
-{{this.customer.username}}
-<br>
-   <h3>{{this.customerName}}</h3> 
-    <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
+    <h2>Your approved customers:</h2>
+    {{#each listOfConnections}}
+     {{#if this.approvedByBusiness}}
     <br>
-    <h3>{{this.customer.email}}</h3> 
+    {{this.customer.username}}
     <br>
-    <h3>{{this.customer.phone}}</h3> 
-<br>
-    {{#unless approvedByBusiness}}
-    <form action="/business/approve" method="post">
-        <input type='hidden' name='connectionId' value={{this._id}}>
-        <button type="submit" name="approval" value="true">Approve connection to customer?</button>
-    </form>
+    <h3>{{this.customerName}}</h3> 
+        <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
+        <br>
+        <h3>{{this.customer.email}}</h3> 
+        <br>
+        <h3>{{this.customer.phone}}</h3> 
+    <br>
+    {{/if}}
+    {{/each}}
+    <h2>Your customers pending approval:</h2>
+    {{#each listOfConnections}}
+     {{#unless this.approvedByBusiness}}
+    <br>
+    {{this.customer.username}}
+    <br>
+    <h3>{{this.customerName}}</h3> 
+        <h3>{{this.customer.firstName}} {{this.customer.lastName}}</h3> 
+        <br>
+        <h3>{{this.customer.email}}</h3> 
+        <br>
+        <h3>{{this.customer.phone}}</h3> 
+    <br>
+            <hr>
+            <form action="/business/approve" method="post">
+            <input type='hidden' name='connectionId' value={{this._id}}>
+            <button type="submit" name="approval" value="true">Approve connection to customer?</button>
+        </form>
     {{/unless}}
-    <hr>
+    {{/each}}
 
-{{/each}}
+
 {{/if}}
 {{#unless theUser.isBusiness}}
-<h2>These are the businesses you have connected with:</h2>
+
+<h2>Your business connections:</h2>
 <ul>
 {{#each listOfConnections}}
-   <h3>{{this.business.businessName}}</h3> 
+      {{> businessPartial }}
+    {{#if this.approvedByBusiness}}
+   <h1>{{this.business.username}}</h1> 
+    <h2>{{this.business.firstName}} {{this.business.lastName}}</h2> 
+    <h2>{{this.business.email}}</h2> 
+    <h2>{{this.business.phone}}</h2> 
+    Events:
+    {{#each this.business.meets}}
+<h2>{{this.meetName}} {{this.dateTime}} {{this.location}} </h2>
+{{/each}}
+    {{/if}}
+{{/each}}
+<br>
+<br>
+<br>
+<h2>Your pending business connections:</h2>
+<ul>
+{{#each listOfConnections}}
+    {{#unless this.business.approvedByBusiness}}
+    {{this}}
+   <h3>{{this.business.username}}</h3> 
     <h3>{{this.business.firstName}} {{this.business.lastName}}</h3> 
     <h3>{{this.business.email}}</h3> 
     <h3>{{this.business.phone}}</h3>    
     <hr>
+    {{/unless}}
 {{/each}}
 <a href="/businesslist">Connect to some businesses</a>
 {{/unless}}

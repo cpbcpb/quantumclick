@@ -8,11 +8,19 @@ const bcrypt       = require('bcryptjs');
 const passport     = require('passport');
 const ensureLogin = require('connect-ensure-login');
 const Connection =require('../models/connection');
+const Meet = require('../models/meet')
 
 router.get('/account/myconnections', ensureLogin.ensureLoggedIn(), (req, res, next)=>{
     Connection.find({$or: [{customer:req.user},{business:req.user}]})
-    .populate('business')
     .populate('customer')
+    .populate('business')
+    .populate({
+        path:'business',
+    populate: {
+        path: 'meets',
+        model: 'Meet'
+    }
+})
     .then((listOfConnections)=>{
     res.render('userViews/myConnections', {theUser: req.user, listOfConnections})
     })

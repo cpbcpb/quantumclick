@@ -76,6 +76,8 @@ passport.deserializeUser((id, cb) => {
 
 app.use(flash());
 
+//omg partials
+hbs.registerPartials(__dirname +'/views/partials');
 // default value for title local
 app.locals.title = 'OurSessions';
 
