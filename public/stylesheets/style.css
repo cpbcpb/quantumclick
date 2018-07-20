@@ -1,12 +1,25 @@
 body {
   margin: 20px; }
 
+.accountpage {
+  display: flex; }
+
 /*# sourceMappingURL=style.css.map */
 form {
   display: flex;
   flex-direction: column;
   width: max-content;
   margin: 10px; }
+
+.flexit {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word; }
+
+.flexit li {
+  display: flex;
+  padding: 10px;
+  overflow-wrap: break-word; }
 
 form label {
   display: flex; }
@@ -21,7 +34,13 @@ form input {
 
 .busBoxes {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.busBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .connectContain {
   display: flex;
@@ -29,7 +48,8 @@ form input {
 
 .eventrow {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 nav {
   display: flex;
