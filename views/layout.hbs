@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'>
 {{!-- this script is an experiment to see how time works in browser in js 
 results: each time the page is refreshed it reruns the script and gets the time/date from
 the user's computer settings including time zone. note that script written here in the layout
@@ -11,13 +12,17 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
     var currentTime = new Date();
   </script> --}}
     </head>
+
+
   <body>
-  <nav>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+      <h1>OurSessions</h1>
 {{#if theUser.username}}
-<h1>Welcome {{theUser.username}}</h1>
+      <h1>Welcome {{theUser.username}}</h1>
 {{#if theUser.isBusiness}}
-<a href="/meets/new">Create a session</a>
-<a href="/account/mymeets">My sessions</a>
+    <a href="/meets/new">Create a session</a>
+    <a href="/account/mymeets">My sessions</a>
 {{/if}}
 {{#unless theUser.isBusiness}}
 <a href="/businesslist">Find a Business</a>
@@ -31,6 +36,7 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 <a href="/login">login</a>
 <a href="/signup">sign up</a>
 {{/unless}}
+</div>
     </nav>
     {{#if Message}}
     <h1>Site Message:{{Message}}</h1>
