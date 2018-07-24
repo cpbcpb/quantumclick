@@ -4,6 +4,21 @@ body {
 .accountpage {
   display: flex; }
 
+.explain {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px; }
+
+.indexAll {
+  background-image: url(../images/background.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.indexAll p {
+  font-size: 25px;
+  padding: 90px; }
+
 /*# sourceMappingURL=style.css.map */
 form {
   display: flex;
