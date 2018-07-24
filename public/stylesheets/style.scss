@@ -1,5 +1,5 @@
 body {
-    margin: 20px;
+    background-color:lightskyblue;
 }
 .accountpage{
     display: flex;
@@ -12,8 +12,11 @@ body {
 .indexAll{
     background-image: url(../images/background.jpg);
     height:100vh;
+    padding:50px;
     display:flex;
     flex-direction:column;
+    width:100vw;
+    background-size:cover;
 }
 .indexAll p{
     font-size: 25px;
@@ -77,9 +80,14 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: lightseagreen;
+    background-color: lightskyblue;
 }
+.navRight {
+display:flex;
+justify-content: flex-end;
+background-color:orange;
 
+}
 .eventrow label{
     padding-left: 10px;
     padding-right: 10px;

@@ -25,15 +25,18 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 {{/if}}
 {{#unless theUser.isBusiness}}
 <a href="/businesslist">Find a Business</a>
+<div class="navRight">
 {{/unless}}
 <a href="/account">My Account</a>
 <a href="/account/myconnections">My Connections</a>
 <a href="/logout">Logout</a>
 {{/if}}
+
 {{#unless theUser.username}}
 <a href="/login">login</a>
 <a href="/signup">sign up</a>
 {{/unless}}
+</div>
     </nav>
     {{!-- {{#if Message}}
     <h1>Site Message:{{Message}}</h1>
