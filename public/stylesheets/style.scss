@@ -1,5 +1,5 @@
 body {
-    background-color:lightskyblue;
+    background-color:lightseagreen;
 }
 .accountpage{
     display: flex;
@@ -85,9 +85,13 @@ nav {
 .navRight {
 display:flex;
 justify-content: flex-end;
-background-color:orange;
-
 }
+.navRight a{
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+
 .eventrow label{
     padding-left: 10px;
     padding-right: 10px;
