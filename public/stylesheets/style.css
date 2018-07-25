@@ -1,5 +1,12 @@
+button {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: lightcyan;
+  margin: 0 10px;
+  min-width: 80px; }
+
 body {
-  background-color: lightseagreen; }
+  background-color: lightcyan; }
 
 .accountpage {
   display: flex; }
@@ -10,7 +17,6 @@ body {
   font-size: 20px; }
 
 .indexAll {
-  background-image: url(../images/background.jpg);
   height: 100vh;
   padding: 50px;
   display: flex;
@@ -80,9 +86,18 @@ nav {
   align-items: center;
   background-color: lightskyblue; }
 
+.logo {
+  color: navy; }
+
+.logo h3 {
+  font-size: 30px; }
+
 .navRight {
   display: flex;
   justify-content: flex-end; }
+
+.navRight h3 {
+  margin: 0 20px; }
 
 .navRight a {
   padding-left: 10px;

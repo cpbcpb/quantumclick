@@ -25,9 +25,10 @@
 
 <h2>Your business connections:</h2>
 {{#each listOfConnections}}
+    {{#if this.approvedByBusiness}}
 <div class="connectContain">
 <h3>{{this.business.businessName}} {{this.business.firstName}} {{this.business.lastName}}</h3>
-    {{#if this.approvedByBusiness}}
+
       {{> businessPartial }}
           Events:
       <div class="eventrow">

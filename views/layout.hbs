@@ -16,26 +16,29 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 
   <body>
     <nav>
-      <h3>OurSessions</h3>
+      <div class="logo"><h3>OurSessions</h3></div>
+
       <div class="navRight">
 {{#if theUser.username}}
-      <h3>Welcome {{theUser.username}}</h3></div>
+      <h3>Welcome, {{theUser.username}}!</h3></div>
 {{#if theUser.isBusiness}}
-    <a href="/meets/new">Create a session</a>
-    <a href="/account/mymeets">My sessions</a>
+    <a href="/meets/new"><button>Create a session</button></a>
+    <a href="/account/mymeets"><button>My sessions</button></a>
 {{/if}}
 {{#unless theUser.isBusiness}}
-<a href="/businesslist">Find a Business</a>
+<a href="/businesslist"><button>Find a Business</button></a>
 
 {{/unless}}
-<a href="/account">My Account</a>
-<a href="/account/myconnections">My Connections</a>
-<a href="/logout">Logout</a>
+<a href="/account"><button>My Account</button></a>
+<a href="/account/myconnections"><button>My Connections</button></a>
+<a href="/logout"><button>Logout</button></a>
 {{/if}}
 
 {{#unless theUser.username}}
-<a href="/login">login</a>
-<a href="/signup">sign up</a>
+<a href="/login"><button>login</button></a>
+<a href="/signup"><button>sign up</button></a>
+
+
 {{/unless}}
 </div>
     </nav>
