@@ -5,12 +5,9 @@ button {
   background-color: white;
   margin: 0 10px;
   color: #0c0c3b;
-  font-size: 20px;
+  font-size: 18px;
   font-family: fantasy;
   border-color: rgba(207, 75, 23, 0.89); }
-
-body {
-  background-color: darkslategrey; }
 
 .accountpage {
   display: flex; }
@@ -21,21 +18,29 @@ body {
   font-size: 22px;
   justify-content: space-around;
   align-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   font-family: fantasy;
   letter-spacing: 1px; }
 
 .explain div {
-  max-width: 350px;
+  max-width: 400px;
   margin: 5px 30px 40px 30px;
-  padding: 0; }
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0c0c3b;
+  border-radius: 30px; }
 
 .indexAll {
   height: 100vh;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-content: center;
   background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
   background-size: cover;
@@ -47,21 +52,70 @@ body {
   font-family: fantasy; }
 
 .titleandtag {
+  margin-top: 100px;
   padding: 0;
   font-size: 19px;
   text-align: center; }
 
-.indexAll h1 {
-  font-size: 60px;
+.indextitle {
+  font-size: 55px;
   text-align: center;
   padding: 0;
   margin: 40px 0 0 0; }
 
-form {
+.signup-all {
+  display: flex;
+  padding-top: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  color: white;
+  font-family: fantasy;
+  min-height: 100vh; }
+
+.all-login {
   display: flex;
   flex-direction: column;
-  width: max-content;
-  margin: 10px; }
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  padding-top: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  color: white;
+  font-family: fantasy;
+  justify-content: center;
+  align-items: center; }
+
+.signup-all form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+  font-family: arial;
+  max-width: max-content;
+  max-height: min-content; }
+
+.all-login form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+  font-family: arial;
+  max-width: max-content;
+  max-height: min-content; }
+
+.all-login label {
+  margin: 0 10px; }
 
 .flexit {
   display: flex;
@@ -77,7 +131,8 @@ form label {
   display: flex; }
 
 form input {
-  width: max-content; }
+  width: max-content;
+  color: darkblue; }
 
 .card {
   border: .5px solid green;
@@ -97,7 +152,8 @@ form input {
 
 .connectContain {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: wrap; }
 
 .eventrow {
   display: flex;
@@ -107,7 +163,7 @@ form input {
 nav {
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
@@ -138,5 +194,48 @@ nav {
 .eventrow label {
   padding-left: 10px;
   padding-right: 10px; }
+
+.myAccountAll {
+  height: 100%;
+  padding: 150px;
+  background-color: white;
+  color: darkblue;
+  font-size: 20px; }
+
+.businessListAll {
+  padding: 150px; }
+
+.allMeets {
+  padding: 150px; }
+
+.allConnections {
+  padding: 150px; }
+
+.newMeetAll {
+  padding: 200px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+
+.newMeetAll form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+
+.newMeetAll form div {
+  display: flex;
+  flex-direction: row; }
+
+.newMeetAll form div label {
+  margin-left: 20px; }
+
+.newMeetAll form div input {
+  margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

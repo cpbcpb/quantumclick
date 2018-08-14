@@ -1,8 +1,9 @@
+<div class="signup-all">
 
-<h1>Signup</h1>
+<h1>sign up</h1>
 
 <form action="/signup" method="post">
-
+<div>
     <label for="username">Username</label>
     <input id="username" type="text" name="username">
 
@@ -30,6 +31,8 @@
     <option value=true>Business</option>
     <option value=false>Client</option>
 </select>
+</div>
+<div>
 Required for business only:
 <label>Business Name</label>
 <input type="text" name="businessName">
@@ -37,16 +40,16 @@ Required for business only:
 <label>website URL</label>
 <input type="text" name="websiteURL">
 <br>
+<div>
 <label>Describe Your Business</label>
 <textarea name="businessDescription" cols="30" rows="10" ></textarea><br>
-
+</div>
     <button class="btn btn-default" >Submit</button>
-
-
-
+</div>
 </form>
 
 {{#if errorMessage}}
 <div>{{errorMessage}}</div>
 {{/if}}
 
+</div>
