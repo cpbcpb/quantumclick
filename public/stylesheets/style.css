@@ -1,12 +1,16 @@
 button {
   border-radius: 10px;
-  padding: 10px;
-  background-color: lightcyan;
+  padding: 10px 0 0 0;
+  width: 140px;
+  background-color: white;
   margin: 0 10px;
-  min-width: 80px; }
+  color: #0c0c3b;
+  font-size: 20px;
+  font-family: fantasy;
+  border-color: rgba(207, 75, 23, 0.89); }
 
 body {
-  background-color: lightcyan; }
+  background-color: darkslategrey; }
 
 .accountpage {
   display: flex; }
@@ -14,21 +18,45 @@ body {
 .explain {
   display: flex;
   flex-direction: row;
-  font-size: 20px; }
+  font-size: 22px;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  font-family: fantasy;
+  letter-spacing: 1px; }
+
+.explain div {
+  max-width: 350px;
+  margin: 5px 30px 40px 30px;
+  padding: 0; }
 
 .indexAll {
   height: 100vh;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  background-size: cover; }
+  justify-content: space-evenly;
+  align-content: center;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  color: white;
+  font-size: 35px;
+  font-family: fantasy; }
 
-.indexAll p {
-  font-size: 25px;
-  padding: 90px; }
+.titleandtag {
+  padding: 0;
+  font-size: 19px;
+  text-align: center; }
 
-/*# sourceMappingURL=style.css.map */
+.indexAll h1 {
+  font-size: 60px;
+  text-align: center;
+  padding: 0;
+  margin: 40px 0 0 0; }
+
 form {
   display: flex;
   flex-direction: column;
@@ -78,26 +106,30 @@ form input {
 
 nav {
   display: flex;
+  position: fixed;
+  width: 100%;
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: lightskyblue; }
+  flex-wrap: wrap;
+  background-color: #0c0c3b; }
 
 .logo {
-  color: navy; }
+  color: white;
+  font-family: fantasy;
+  text-align: center;
+  text-shadow: 1px 1px rgba(207, 75, 23, 0.89); }
 
 .logo h3 {
-  font-size: 30px; }
+  font-size: 20px; }
 
 .navRight {
   display: flex;
-  justify-content: flex-end; }
-
-.navRight h3 {
-  margin: 0 20px; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .navRight a {
   padding-left: 10px;

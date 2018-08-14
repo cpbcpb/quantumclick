@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
-
+const Connection = "./connection.js"
+const Meet = "./meet.js"
 const userSchema = new Schema({
     //things to be given in signup
     username: String,
@@ -15,7 +16,7 @@ const userSchema = new Schema({
    businessDescription: {type: String},
    websiteURL: {type: String},
    //the user's connections
-   connections: [{type: Schema.Types.ObjectId}
+   connections: [{type: Schema.Types.ObjectId, ref: 'Connection'}
 ],  
    meets: [{type: Schema.Types.ObjectId, ref: 'Meet'}
         ],
