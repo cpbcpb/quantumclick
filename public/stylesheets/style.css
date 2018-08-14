@@ -76,9 +76,9 @@ button {
   background-repeat: no-repeat;
   background-position-y: 100%;
   background-position-x: center;
-  color: white;
   font-family: fantasy;
-  min-height: 100vh; }
+  min-height: 100vh;
+  color: white; }
 
 .all-login {
   display: flex;
@@ -104,6 +104,15 @@ button {
   font-family: arial;
   max-width: max-content;
   max-height: min-content; }
+
+.signup-all .inForm label {
+  color: white; }
+
+.inForm select, textarea {
+  color: darkblue; }
+
+input {
+  color: darkblue; }
 
 .all-login form {
   display: flex;
@@ -248,6 +257,7 @@ nav {
 
 .main {
   background-image: url(../images/jeremy-cai-141572-unsplash.jpg);
-  color: rgba(207, 75, 23, 0.89); }
+  color: rgba(207, 75, 23, 0.89);
+  min-height: 100vh; }
 
 /*# sourceMappingURL=style.css.map */
