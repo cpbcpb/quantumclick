@@ -29,7 +29,7 @@ router.post('/user/update', ensureLogin.ensureLoggedIn(), (req, res, next)=>{
 
     })
     .then((theUser)=>{
-        res.redirect('/account')
+        res.redirect('/account', {theUser: req.user});
     })
     .catch((err)=>{
         next(err);

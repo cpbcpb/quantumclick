@@ -16,6 +16,7 @@ button {
 
 .accountpage{
     display: flex;
+
 }
 .explain{
     display:flex;
@@ -105,7 +106,7 @@ button {
     align-items:center;
 }
 
-.signup-all form {
+.signup-all .inForm {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -213,9 +214,12 @@ justify-content: space-around;
 .myAccountAll{
     height: 100%;
     padding:150px;
-    background-color:white;
-    color:darkblue;
+    background-color:darkblue;
     font-size:20px;
+    background-image:url(../images/jeremy-cai-141572-unsplash.jpg);
+    background-size:cover;
+    min-height:100vh;
+    color:White;
 }
 
 .businessListAll{
@@ -253,4 +257,13 @@ justify-content: space-around;
 }
 .newMeetAll form div input{
     margin-right:20px;
+}
+.centerSubmitButton{
+display:flex;
+flex-direction:column;
+align-items: center;
+}
+.main{
+    background-image:url(../images/jeremy-cai-141572-unsplash.jpg);
+    color: rgba(207, 75, 23, 0.89);
 }

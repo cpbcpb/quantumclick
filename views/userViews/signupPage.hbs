@@ -3,6 +3,7 @@
 <h1>sign up</h1>
 
 <form action="/signup" method="post">
+<div class="inForm">
 <div>
     <label for="username">Username</label>
     <input id="username" type="text" name="username">
@@ -44,10 +45,16 @@ Required for business only:
 <label>Describe Your Business</label>
 <textarea name="businessDescription" cols="30" rows="10" ></textarea><br>
 </div>
-    <button class="btn btn-default" >Submit</button>
+    </div>
 </div>
+<div class="centerSubmitButton">
+    <button class="btn btn-default" >Submit</button>
+    </div>
 </form>
 
+
+
+    </div>
 {{#if errorMessage}}
 <div>{{errorMessage}}</div>
 {{/if}}
