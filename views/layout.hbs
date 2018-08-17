@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    <link rel='stylesheet' href='/stylesheets/style.css'>
-{{!-- this script is an experiment to see how time works in browser in js 
-results: each time the page is refreshed it reruns the script and gets the time/date from
-the user's computer settings including time zone. note that script written here in the layout
-will show from layout on the index page but cant be referred to in index.hbs?--}}
-      {{!-- <script type="text/javascript">
+
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <link rel='stylesheet' href='/stylesheets/style.css'> {{!-- this script is an experiment to see how time works in browser
+  in js results: each time the page is refreshed it reruns the script and gets the time/date from the user's computer settings
+  including time zone. note that script written here in the layout will show from layout on the index page but cant be referred
+  to in index.hbs?--}} {{!--
+  <script type="text/javascript">
     var currentTime = new Date();
   </script> --}}
-    </head>
+</head>
 
 
-  <body>
-    
-    <nav>
-      <div class="logo"><h3>OurSessions</h3></div>
+<body>
 
-      <div class="navRight">
-{{#if theUser.username}}
-      <h3>Welcome, {{theUser.username}}!</h3></div>
-{{#if theUser.isBusiness}}
+  <nav>
+    <div class="logo">
+      <h3>OurSessions</h3>
+    </div>
+
+    <div class="navRight">
+      {{#if theUser.username}}
+      <h3>Welcome, {{theUser.username}}!</h3>
+    </div>
+    {{#if theUser.isBusiness}}
     <a href="/meets/new"><button>Create a session</button></a>
     <a href="/account/mymeets"><button>My sessions</button></a>
-{{/if}}
-{{#unless theUser.isBusiness}}
-<a href="/businesslist"><button>Find a Business</button></a>
+    {{/if}} {{#unless theUser.isBusiness}}
+    <a href="/businesslist"><button>Find a Business</button></a>
 
-{{/unless}}
-<a href="/account"><button>My Account</button></a>
-<a href="/account/myconnections"><button>My Connections</button></a>
-<a href="/logout"><button>Logout</button></a>
-{{/if}}
-
-{{#unless theUser.username}}
-<a href="/login"><button>login</button></a>
-<a href="/signup"><button>sign up</button></a>
+    {{/unless}}
+    <a href="/account"><button>My Account</button></a>
+    <a href="/account/myconnections"><button>My Connections</button></a>
+    <a href="/logout"><button>Logout</button></a>
+    {{/if}} {{#unless theUser.username}}
+    <a href="/login"><button>login</button></a>
+    <a href="/signup"><button>sign up</button></a>
 
 
-{{/unless}}
-</div>
-    </nav>
-    {{!-- {{#if Message}}
-    <h1>Site Message:{{Message}}</h1>
-    {{/if}} --}}
-        {{!-- <h1>
-      The current time and Date is:
-      <script type="text/javascript">
-        document.write(currentTime)
-      </script>
-    </h1> --}}
-    <div class="main">
+    {{/unless}}
+    </div>
+  </nav>
+  {{!-- {{#if Message}}
+  <h1>Site Message:{{Message}}</h1>
+  {{/if}} --}} {{!--
+  <h1>
+    The current time and Date is:
+    <script type="text/javascript">
+      document.write(currentTime)
+    </script>
+  </h1> --}}
+  <div class="main">
     {{{body}}}
-</div>
-    <script src='/javascripts/script.js'></script>
-  </body>
+  </div>
+  <script src='/javascripts/script.js'></script>
+</body>
+
 </html>
 
-{{!-- <html>
+{{!--
+<html>
+
 <head>
   <script type="text/javascript">
     var number = 123;
@@ -69,4 +72,5 @@ will show from layout on the index page but cant be referred to in index.hbs?--}
 <body>
 
 </body>
+
 </html> --}}

@@ -7,10 +7,12 @@ button {
   color: #0c0c3b;
   font-size: 18px;
   font-family: fantasy;
-  border-color: rgba(207, 75, 23, 0.89); }
+  border-color: rgba(207, 75, 23, 0.89);
+}
 
 .accountpage {
-  display: flex; }
+  display: flex;
+}
 
 .explain {
   display: flex;
@@ -21,7 +23,8 @@ button {
   align-items: center;
   flex-wrap: wrap;
   font-family: fantasy;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+}
 
 .explain div {
   max-width: 400px;
@@ -33,7 +36,8 @@ button {
   align-items: center;
   text-align: center;
   background-color: #0c0c3b;
-  border-radius: 30px; }
+  border-radius: 30px;
+}
 
 .indexAll {
   height: 100vh;
@@ -49,19 +53,22 @@ button {
   background-position-x: center;
   color: white;
   font-size: 35px;
-  font-family: fantasy; }
+  font-family: fantasy;
+}
 
 .titleandtag {
   margin-top: 100px;
   padding: 0;
   font-size: 19px;
-  text-align: center; }
+  text-align: center;
+}
 
 .indextitle {
   font-size: 55px;
   text-align: center;
   padding: 0;
-  margin: 40px 0 0 0; }
+  margin: 40px 0 0 0;
+}
 
 .signup-all {
   display: flex;
@@ -78,7 +85,8 @@ button {
   background-position-x: center;
   font-family: fantasy;
   min-height: 100vh;
-  color: white; }
+  color: white;
+}
 
 .all-login {
   display: flex;
@@ -94,7 +102,8 @@ button {
   color: white;
   font-family: fantasy;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .signup-all .inForm {
   display: flex;
@@ -103,16 +112,21 @@ button {
   margin: 50px 10px;
   font-family: arial;
   max-width: max-content;
-  max-height: min-content; }
+  max-height: min-content;
+}
 
 .signup-all .inForm label {
-  color: white; }
+  color: white;
+}
 
-.inForm select, textarea {
-  color: darkblue; }
+.inForm select,
+textarea {
+  color: darkblue;
+}
 
 input {
-  color: darkblue; }
+  color: darkblue;
+}
 
 .all-login form {
   display: flex;
@@ -121,53 +135,64 @@ input {
   margin: 50px 10px;
   font-family: arial;
   max-width: max-content;
-  max-height: min-content; }
+  max-height: min-content;
+}
 
 .all-login label {
-  margin: 0 10px; }
+  margin: 0 10px;
+}
 
 .flexit {
   display: flex;
   flex-direction: column;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+}
 
 .flexit li {
   display: flex;
   padding: 10px;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+}
 
 form label {
-  display: flex; }
+  display: flex;
+}
 
 form input {
   width: max-content;
-  color: darkblue; }
+  color: darkblue;
+}
 
 .card {
-  border: .5px solid green;
+  border: 0.5px solid green;
   padding: 10px;
-  width: max-content; }
+  width: max-content;
+}
 
 .busBoxes {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
 .busBox {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: min-content; }
+  width: min-content;
+}
 
 .connectContain {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
 .eventrow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
 nav {
   display: flex;
@@ -180,29 +205,35 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #0c0c3b; }
+  background-color: #0c0c3b;
+}
 
 .logo {
   color: white;
   font-family: fantasy;
   text-align: center;
-  text-shadow: 1px 1px rgba(207, 75, 23, 0.89); }
+  text-shadow: 1px 1px rgba(207, 75, 23, 0.89);
+}
 
 .logo h3 {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .navRight {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .navRight a {
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
 .eventrow label {
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
 .myAccountAll {
   height: 100%;
@@ -212,16 +243,20 @@ nav {
   background-image: url(../images/jeremy-cai-141572-unsplash.jpg);
   background-size: cover;
   min-height: 100vh;
-  color: White; }
+  color: White;
+}
 
 .businessListAll {
-  padding: 150px; }
+  padding: 150px;
+}
 
 .allMeets {
-  padding: 150px; }
+  padding: 150px;
+}
 
 .allConnections {
-  padding: 150px; }
+  padding: 150px;
+}
 
 .newMeetAll {
   padding: 200px 0;
@@ -230,7 +265,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .newMeetAll form {
   display: flex;
@@ -238,26 +274,32 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .newMeetAll form div {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .newMeetAll form div label {
-  margin-left: 20px; }
+  margin-left: 20px;
+}
 
 .newMeetAll form div input {
-  margin-right: 20px; }
+  margin-right: 20px;
+}
 
 .centerSubmitButton {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
 
 .main {
   background-image: url(../images/jeremy-cai-141572-unsplash.jpg);
   color: rgba(207, 75, 23, 0.89);
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 /*# sourceMappingURL=style.css.map */

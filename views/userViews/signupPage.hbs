@@ -1,60 +1,58 @@
 <div class="signup-all">
 
-<h1>sign up</h1>
+    <h1>sign up</h1>
 
-<form action="/signup" method="post">
-<div class="inForm">
-<div>
-    <label for="username">Username</label>
-    <input id="username" type="text" name="username">
+    <form action="/signup" method="post">
+        <div class="inForm">
+            <div>
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username">
 
-    <label for="password">password</label>
-    <input id="password" name="password" type="password">
+                <label for="password">password</label>
+                <input id="password" name="password" type="password">
 
-    <label for="email">email</label>
-    <input id="email" name="email" type="email">
+                <label for="email">email</label>
+                <input id="email" name="email" type="email">
 
-   <label for="firstName">First Name</label>
-    <input id="firstName" name="firstName" type="text">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text">
 
-   <label for="lastName">Last Name</label>
-    <input id="lastName" name="lastName" type="text">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text">
 
 
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone"
-           placeholder="123-456-7890"
-           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-    <span class="validity"></span>
-    
-<label>Are you using this account as a client or as a business?</label>
-<select name="isBusiness" required="true">
-    <option value=true>Business</option>
-    <option value=false>Client</option>
-</select>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <span class="validity"></span>
+
+                <label>Are you using this account as a client or as a business?</label>
+                <select name="isBusiness" required="true">
+                    <option value=true>Business</option>
+                    <option value=false>Client</option>
+                </select>
+            </div>
+            <div>
+                Required for business only:
+                <label>Business Name</label>
+                <input type="text" name="businessName">
+                <br>
+                <label>website URL</label>
+                <input type="text" name="websiteURL">
+                <br>
+                <div>
+                    <label>Describe Your Business</label>
+                    <textarea name="businessDescription" cols="30" rows="10"></textarea><br>
+                </div>
+            </div>
+        </div>
+        <div class="centerSubmitButton">
+            <button class="btn btn-default">Submit</button>
+        </div>
+    </form>
+
+
+
 </div>
-<div>
-Required for business only:
-<label>Business Name</label>
-<input type="text" name="businessName">
-<br>
-<label>website URL</label>
-<input type="text" name="websiteURL">
-<br>
-<div>
-<label>Describe Your Business</label>
-<textarea name="businessDescription" cols="30" rows="10" ></textarea><br>
-</div>
-    </div>
-</div>
-<div class="centerSubmitButton">
-    <button class="btn btn-default" >Submit</button>
-    </div>
-</form>
-
-
-
-    </div>
 {{#if errorMessage}}
 <div>{{errorMessage}}</div>
 {{/if}}

@@ -1,39 +1,38 @@
 <div class="newMeetAll">
-<form class="form-horizontal" action="/meets/create" method="post">
-<div class="form-group">
-<label for="meetName">Name your session:</label>
+  <form class="form-horizontal" action="/meets/create" method="post">
+    <div class="form-group">
+      <label for="meetName">Name your session:</label>
 
-<input type="hidden" value={{theUser._id}} name="business">
-<input type="text" name="meetName" id="meetName">
-</div>
-<div class="form-group">
-<label>Date</label>
+      <input type="hidden" value={{theUser._id}} name="business">
+      <input type="text" name="meetName" id="meetName">
+    </div>
+    <div class="form-group">
+      <label>Date</label>
 
-<input type="datetime-local" name="dateTime">
-</div>
-<div class="form-group">
-<label>Duration in minutes</label>
-<input type="number" name="durationInMinutes">
-</div>
-  <div class="form-group">
-<label>Location</label>
-<input type="text" name="location">
-</div>
-<br>
-  <div class="form-group">
-<label for="">Put an Image URL here</label>
-<input type="text" name="imageURL">
-</div>
-{{!-- **********not working right*************
-<fieldset>
-<legend>Choose confirmed customers:</legend>
-    {{#each allRelationships}}
-<label for={{this.customer._id}}>{{this.customer.firstName}} {{this.customer.lastName}}</label>
-<input type="checkbox" name="customer" id={{this.customer._id}} value="{{this.customer._id}}">
-    {{/each}}  
-</fieldset> --}}
-<br>
-<button class="btn btn-default">Submit</button>
-<br>
-</form>
+      <input type="datetime-local" name="dateTime">
+    </div>
+    <div class="form-group">
+      <label>Duration in minutes</label>
+      <input type="number" name="durationInMinutes">
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" name="location">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="">Put an Image URL here</label>
+      <input type="text" name="imageURL">
+    </div>
+    {{!-- **********not working right*************
+    <fieldset>
+      <legend>Choose confirmed customers:</legend>
+      {{#each allRelationships}}
+      <label for={{this.customer._id}}>{{this.customer.firstName}} {{this.customer.lastName}}</label>
+      <input type="checkbox" name="customer" id={{this.customer._id}} value="{{this.customer._id}}"> {{/each}}
+    </fieldset> --}}
+    <br>
+    <button class="btn btn-default">Submit</button>
+    <br>
+  </form>
 </div>

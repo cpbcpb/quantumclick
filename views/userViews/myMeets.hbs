@@ -1,21 +1,21 @@
 <div class="allMeets">
 
-<h2>These are your meets:</h2>
-<div class="eventrow" >
-{{#each listOfMeets}}
-<br>
-<div>
-{{> meetPartial}}
-</div>
-    <br>
-<br>
-<hr>
+    <h2>These are your meets:</h2>
+    <div class="eventrow">
+        {{#each listOfMeets}}
+        <br>
+        <div>
+            {{> meetPartial}}
+        </div>
+        <br>
+        <br>
+        <hr> {{/each}}
 
-{{/each}}</div>
+    </div>
 
-{{#unless theUser.isBusiness}}
-<a href="/businesslist">Connect to some businesses</a>
-{{/unless}}
+    {{#unless theUser.isBusiness}}
+    <a href="/businesslist">Connect to some businesses</a>
+    {{/unless}}
 </div>
 
 

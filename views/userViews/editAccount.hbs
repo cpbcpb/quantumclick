@@ -1,5 +1,4 @@
-{{!-- I will change this to become an edit account form...with user profile
-information  --}}
+{{!-- I will change this to become an edit account form...with user profile information --}}
 
 
 <h2>{{theUser.username}}</h2>
@@ -7,40 +6,34 @@ information  --}}
 
 <form action="/user/update" method="post">
 
-<label>First name:</label>
-<input type="text" name="firstName" value="{{theUser.firstName}}">
-<br>
-<label>Last name:</label>
-<input type="text" name="lastName" value="{{theUser.lastName}}">
-<br>
-<label for="phone">Phone</label>
-<input type="tel" name="phone" value="{{theUser.phone}}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-           required />>
-                      required />
+    <label>First name:</label>
+    <input type="text" name="firstName" value="{{theUser.firstName}}">
+    <br>
+    <label>Last name:</label>
+    <input type="text" name="lastName" value="{{theUser.lastName}}">
+    <br>
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" value="{{theUser.phone}}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />> required />
     <span class="validity"></span>
-<br>
+    <br>
 
-<label>email</label>
-<input type="email" name="email" value="{{theUser.email}}">
-<br>
-{{#if theUser.isBusiness}}
-<label>Business Name</label>
-<input type="text" name="businessName" value="{{theUser.businessName}}">
-<br>
-<label>website URL</label>
-<input type="text" name="websiteURL" value="{{theUser.websiteURL}}">
-<br>
-<label>Describe Your Business</label>
-<textarea name="businessDescription" cols="30" rows="10" >{{theUser.businessDescription}}</textarea><br>
-{{/if}}
-{{!-- <label>Description</label>
-<textarea name="description" cols="30" rows="10" >{{theBook.description}}</textarea>
-<br> --}}
-
-{{!-- <label>Rating</label>
-<input type="number" name="rating" value="{{theBook.rating}}">
-<br> --}}
-<button class="btn btn-default" type="submit">Save Changes</button>
+    <label>email</label>
+    <input type="email" name="email" value="{{theUser.email}}">
+    <br> {{#if theUser.isBusiness}}
+    <label>Business Name</label>
+    <input type="text" name="businessName" value="{{theUser.businessName}}">
+    <br>
+    <label>website URL</label>
+    <input type="text" name="websiteURL" value="{{theUser.websiteURL}}">
+    <br>
+    <label>Describe Your Business</label>
+    <textarea name="businessDescription" cols="30" rows="10">{{theUser.businessDescription}}</textarea><br> {{/if}} {{!--
+    <label>Description</label>
+    <textarea name="description" cols="30" rows="10">{{theBook.description}}</textarea>
+    <br> --}} {{!-- <label>Rating</label>
+    <input type="number" name="rating" value="{{theBook.rating}}">
+    <br> --}}
+    <button class="btn btn-default" type="submit">Save Changes</button>
 </form>
 
-<button class="btn btn-default" ><a href="/account/areyousure">Delete Your Account</a></button>
+<button class="btn btn-default"><a href="/account/areyousure">Delete Your Account</a></button>

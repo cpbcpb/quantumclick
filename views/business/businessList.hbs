@@ -1,25 +1,17 @@
 <div class="businessListAll">
 
-{{#if alreadyExists}}
-Current Connections
-{{alreadyExists}}
-{{#each alreadyExists}}
-{{this.business.username}}
-<hr>
-{{/each}}
-{{/if}}
-Connect to Businesses
-<div class="busBoxes">
-{{#each listOfBusinesses}}
-    {{#if this.isBusiness}}
-<div class="busBox">
-    {{>buspart2}}
-<div class="busD">{{this.businessDescription}}</div>
-<form action="/business/createconnect" method="post">
-<button name="business" value={{this._id}} type="submit">Connect</button>
-</div>
-    {{/if}}
-    <hr>
+    {{#if alreadyExists}} Current Connections {{alreadyExists}} {{#each alreadyExists}} {{this.business.username}}
+    <hr> {{/each}} {{/if}} Connect to Businesses
+    <div class="busBoxes">
+        {{#each listOfBusinesses}} {{#if this.isBusiness}}
+        <div class="busBox">
+            {{>buspart2}}
+            <div class="busD">{{this.businessDescription}}</div>
+            <form action="/business/createconnect" method="post">
+                <button name="business" value={{this._id}} type="submit">Connect</button>
+        </div>
+        {{/if}}
+        <hr>
     </div>
-{{/each}}
+    {{/each}}
 </div>

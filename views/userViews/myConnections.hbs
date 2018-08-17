@@ -1,57 +1,37 @@
 <div class="allConnections">
-{{#if theUser.isBusiness}}
+    {{#if theUser.isBusiness}}
     <h2>Your approved customers:</h2>
-    {{#each listOfConnections}}
-     {{#if this.approvedByBusiness}}
-{{>customerPartial}}
-    <br>
-    {{/if}}
-    {{/each}}
+    {{#each listOfConnections}} {{#if this.approvedByBusiness}} {{>customerPartial}}
+    <br> {{/if}} {{/each}}
     <h2>Your customers pending approval:</h2>
-    {{#each listOfConnections}}
-     {{#unless this.approvedByBusiness}}
-    <br>
-    {{>customerPartial}}
-            <hr>
-            <form action="/business/approve" method="post">
-            <input type='hidden' name='connectionId' value={{this._id}}>
-            <button class="btn btn-default" type="submit" name="approval" value="true">Approve connection to customer?</button>
-        </form>
+    {{#each listOfConnections}} {{#unless this.approvedByBusiness}}
+    <br> {{>customerPartial}}
+    <hr>
+    <form action="/business/approve" method="post">
+        <input type='hidden' name='connectionId' value={{this._id}}>
+        <button class="btn btn-default" type="submit" name="approval" value="true">Approve connection to customer?</button>
+    </form>
+    {{/unless}} {{/each}} {{/if}} {{#unless theUser.isBusiness}}
+
+    <h2>Your business connections:</h2>
+    {{#each listOfConnections}} {{#if this.approvedByBusiness}}
+    <div class="connectContain">
+        <h3>{{this.business.businessName}} {{this.business.firstName}} {{this.business.lastName}}</h3>
+
+        {{> businessPartial }} Events:
+        <div class="eventrow">
+
+            {{#each this.business.meets}} {{> meetPartial}} {{/each}}
+        </div>
+        {{/if}} {{/each}}
+        <br>
+        <br>
+        <br>
+        <h2>Your pending business connections:</h2>
+    </div>
+    {{#each listOfConnections}} {{#unless this.approvedByBusiness}} {{> businessPartial}} {{/unless}} {{/each}}
+    <a href="/businesslist">Connect to some businesses</a>
     {{/unless}}
-    {{/each}}
-
-
-{{/if}}
-{{#unless theUser.isBusiness}}
-
-<h2>Your business connections:</h2>
-{{#each listOfConnections}}
-    {{#if this.approvedByBusiness}}
-<div class="connectContain">
-<h3>{{this.business.businessName}} {{this.business.firstName}} {{this.business.lastName}}</h3>
-
-      {{> businessPartial }}
-          Events:
-      <div class="eventrow">
-
-    {{#each this.business.meets}}
-{{> meetPartial}}
-{{/each}}
-</div>
-    {{/if}}
-{{/each}}
-<br>
-<br>
-<br>
-<h2>Your pending business connections:</h2>
-</div>
-{{#each listOfConnections}}
-    {{#unless this.approvedByBusiness}}
-{{> businessPartial}}
-    {{/unless}}
-{{/each}}
-<a href="/businesslist">Connect to some businesses</a>
-{{/unless}}
 
 </div>
 

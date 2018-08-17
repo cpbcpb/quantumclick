@@ -1,281 +1,273 @@
-
 button {
-    border-radius: 10px;
-    padding: 10px 0 0 0;
-    width: 140px;
-    background-color:white;
-    margin: 0 10px;
-    color:rgb(12, 12, 59);
-    font-size: 18px;
-    font-family: fantasy;
-    border-color: rgba(207, 75, 23, 0.89)
-    
-    
+  border-radius: 10px;
+  padding: 10px 0 0 0;
+  width: 140px;
+  background-color: white;
+  margin: 0 10px;
+  color: rgb(12, 12, 59);
+  font-size: 18px;
+  font-family: fantasy;
+  border-color: rgba(207, 75, 23, 0.89);
 }
 
-
-.accountpage{
-    display: flex;
-
+.accountpage {
+  display: flex;
 }
-.explain{
-    display:flex;
-    flex-direction: row;
-    font-size:22px;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items:center;
-    flex-wrap: wrap;
-    font-family: fantasy;
-    letter-spacing: 1px;
-
+.explain {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: fantasy;
+  letter-spacing: 1px;
 }
-.explain div{
-    max-width: 400px;
-    margin:5px 30px 40px 30px;
-    padding: 10px;
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    align-items:center;
-    text-align: center;
-    background-color: rgb(12, 12, 59);
-    border-radius: 30px;
-
+.explain div {
+  max-width: 400px;
+  margin: 5px 30px 40px 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(12, 12, 59);
+  border-radius: 30px;
 }
-.indexAll{
-     height:100vh;
-    padding:50px;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-content: center;
-    background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 100%;
-    background-position-x:center;
-    color:white;
-    font-size: 35px;
-    font-family: fantasy;
+.indexAll {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  color: white;
+  font-size: 35px;
+  font-family: fantasy;
 }
-.titleandtag{
-    margin-top:100px;
-    padding:0;
-    font-size: 19px;
-    text-align: center;
+.titleandtag {
+  margin-top: 100px;
+  padding: 0;
+  font-size: 19px;
+  text-align: center;
 }
-.indextitle{
-    font-size: 55px;
-    text-align: center;
-    padding:0;
-    margin: 40px 0 0 0;
+.indextitle {
+  font-size: 55px;
+  text-align: center;
+  padding: 0;
+  margin: 40px 0 0 0;
 }
 
-.signup-all{
-    display:flex;
-    padding-top:150px;
-    padding-left:10px;
-    padding-right:10px;
-    flex-direction:column;
-    align-items: center;
-    flex-wrap:wrap;
-    background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 100%;
-    background-position-x:center;
-    font-family: fantasy;
-    min-height:100vh;
-    color:white;
+.signup-all {
+  display: flex;
+  padding-top: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  font-family: fantasy;
+  min-height: 100vh;
+  color: white;
 }
-.all-login{  
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-    flex-wrap:wrap;
-    background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
-    padding-top:100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 100%;
-    background-position-x:center;
-    color:white;
-    font-family: fantasy;
-    justify-content: center;
-    align-items:center;
+.all-login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background-image: url("..//images/jeremy-cai-141572-unsplash.jpg");
+  padding-top: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: center;
+  color: white;
+  font-family: fantasy;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup-all .inForm {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    margin: 50px 10px;
-    font-family:arial;
-    max-width: max-content;
-    max-height:min-content;
-    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+  font-family: arial;
+  max-width: max-content;
+  max-height: min-content;
 }
 
-.signup-all .inForm label{
-    color:white;
+.signup-all .inForm label {
+  color: white;
 }
-.inForm select, textarea{
-    color:darkblue
+.inForm select,
+textarea {
+  color: darkblue;
 }
-input{
-    color:darkblue;
+input {
+  color: darkblue;
 }
 
 .all-login form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    margin: 50px 10px;
-    font-family:arial;
-    max-width: max-content;
-    max-height:min-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+  font-family: arial;
+  max-width: max-content;
+  max-height: min-content;
 }
-.all-login label{
-    margin: 0 10px;
+.all-login label {
+  margin: 0 10px;
 }
-.flexit{
-    display: flex;
-    flex-direction: column;
-    overflow-wrap: break-word;
+.flexit {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
 }
 
-.flexit li{
-    display: flex;
-    padding: 10px;
-    overflow-wrap: break-word;
+.flexit li {
+  display: flex;
+  padding: 10px;
+  overflow-wrap: break-word;
 }
-form label{
-    display: flex;
+form label {
+  display: flex;
 }
-form input{
-    width: max-content;
-    color:darkblue;
+form input {
+  width: max-content;
+  color: darkblue;
 }
 .card {
-    border: .5px solid green;
-    padding: 10px;
-    width: max-content;
+  border: 0.5px solid green;
+  padding: 10px;
+  width: max-content;
 }
-.busBoxes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.busBoxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.busBox{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: min-content;
+.busBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: min-content;
 }
 .connectContain {
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.eventrow  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
+.eventrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 nav {
-    display: flex;
-    position: fixed;
-     width:100vw;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: rgb(12, 12, 59);
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(12, 12, 59);
 }
-.logo{
-    color: white;
-    font-family: fantasy;
-    text-align: center;
-    text-shadow: 1px 1px rgba(207, 75, 23, 0.89);
+.logo {
+  color: white;
+  font-family: fantasy;
+  text-align: center;
+  text-shadow: 1px 1px rgba(207, 75, 23, 0.89);
 }
-.logo h3{
-    font-size: 20px;
+.logo h3 {
+  font-size: 20px;
 }
 .navRight {
-display:flex;
-flex-wrap: wrap;
-justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.navRight a{
-    padding-left: 10px;
-    padding-right:10px;
+.navRight a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-
-.eventrow label{
-    padding-left: 10px;
-    padding-right: 10px;
+.eventrow label {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.myAccountAll{
-    height: 100%;
-    padding:150px;
-    background-color:darkblue;
-    font-size:20px;
-    background-image:url(../images/jeremy-cai-141572-unsplash.jpg);
-    background-size:cover;
-    min-height:100vh;
-    color:White;
+.myAccountAll {
+  height: 100%;
+  padding: 150px;
+  background-color: darkblue;
+  font-size: 20px;
+  background-image: url(../images/jeremy-cai-141572-unsplash.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  color: White;
 }
 
-.businessListAll{
-    padding:150px;
+.businessListAll {
+  padding: 150px;
 }
-.allMeets{
-    padding:150px;
+.allMeets {
+  padding: 150px;
 }
-.allConnections{
-    padding:150px;
+.allConnections {
+  padding: 150px;
 }
-.newMeetAll{
-    padding:200px 0;
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.newMeetAll {
+  padding: 200px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
-.newMeetAll form{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.newMeetAll form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
-.newMeetAll form div{
-    display:flex;
-    flex-direction:row;
+.newMeetAll form div {
+  display: flex;
+  flex-direction: row;
 }
-.newMeetAll form div label{
-    margin-left:20px;
+.newMeetAll form div label {
+  margin-left: 20px;
 }
-.newMeetAll form div input{
-    margin-right:20px;
+.newMeetAll form div input {
+  margin-right: 20px;
 }
-.centerSubmitButton{
-display:flex;
-flex-direction:column;
-align-items: center;
+.centerSubmitButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.main{
-    background-image:url(../images/jeremy-cai-141572-unsplash.jpg);
-    color: rgba(207, 75, 23, 0.89);
-    min-height:100vh;
+.main {
+  background-image: url(../images/jeremy-cai-141572-unsplash.jpg);
+  color: rgba(207, 75, 23, 0.89);
+  min-height: 100vh;
 }
