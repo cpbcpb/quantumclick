@@ -23,13 +23,11 @@ const Connection = require("./models/connection");
 const Meet = require("./models/meet");
 
 mongoose.Promise = Promise;
-mongoose
-  .connect(
-    process.env.MONGODB_URI,
-    { useMongoClient: true }
+mongoose.connect(
+    'mongodb://localhost:27017/test', {useNewUrlParser: true,  useUnifiedTopology: true }
   )
-  .then(() => {
-    console.log("Connected to Mongo!");
+  .then(x => {
+    console.log(`Connected to Mongo!: Database Name "${x.connections[0].name}"`);
   })
   .catch(err => {
     console.error("Error connecting to mongo", err);
